@@ -1,0 +1,11 @@
+<launch>
+
+	<arg name="state_inspection" default="4" />
+	<arg name="parking_count" default="-3" />
+
+	<node name="waypoint_loader_node" pkg="waypoint_maker" type="waypoint_loader_node" output="screen">
+		<param name="state_inspection" value="$(arg state_inspection)" />
+		<param name="parking_count" value="$(arg parking_count)" />
+	</node>
+
+</launch>
